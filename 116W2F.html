@@ -5,8 +5,8 @@
 <meta name="keywords" content="船邊發大財,船邊發大財">
 </head>
 <style type="text/css">
-  body { font-size: 9vmin;}
-  table { font-size: 9vmin;}
+  body { font-size: 8vmin;}
+  table { font-size: 8vmin;}
 </style>
 <body>
 <table border=1 id="table2f" >
@@ -14,9 +14,7 @@
  <tr><td>政聖</td><td>旻隆</td><td>全勝</td><td>勢煌</td><td>進榮</td><td>建有</td><td>國政</td><td>金全</td><td>富信</td></tr>
 </table>
 請點上方的<span id=ques style="color:blue;">abcd</span><br>
-目前得分<div id="usrScore">0</div>
-
-<button onclick=alert(xing4ming2);>how</button>
+目前得分<span id="usrScore">0</span>
 </body>
 <script>
   tr=0; td=0; n=0; xing4ming2=[]; max=0; rndStr=""; score=0;
@@ -36,6 +34,10 @@ function showText(h){
       print_ques();
       document.getElementById("usrScore").innerHTML=++score;
     }
+    else {
+      score-=3;
+      document.getElementById("usrScore").innerHTML=score;
+    }
 }
 function addBr(s){
    a=s.split("");
@@ -52,50 +54,3 @@ function getRandom(min,max){
 }
 print_ques();
 </script>
-
-<button onclick=printScr();>info</button>
-<div id=info></div>
-<script type="text/javascript">
-  function printScr(){
-    s="網頁可見區域寬："+ document.body.clientWidth +
-      "<br>網頁可見區域高："+ document.body.clientHeight +
-      "<br>網頁可見區域寬："+ document.body.offsetWidth + "(包括邊線和捲軸的寬)"+
-      "<br>網頁可見區域高："+ document.body.offsetHeight+"(包括邊線的寬)"+
-      "<br>網頁正文全文寬："+document.body.scrollWidth+
-      "<br>網頁正文全文高："+document.body.scrollHeight+
-      "<br>網頁被卷去的高(ff)："+document.body.scrollTop+
-      "<br>網頁被卷去的高(ie)："+document.documentElement.scrollTop+
-      "<br>網頁被卷去的左："+document.body.scrollLeft+
-      "<br>網頁正文部分上："+window.screenTop+
-      "<br>網頁正文部分左："+window.screenLeft+
-      "<br>螢幕解析度的高："+window.screen.height+
-      "<br>螢幕解析度的寬："+window.screen.width+
-      "<br>螢幕可用工作區高度："+window.screen.availHeight+
-      "<br>螢幕可用工作區寬度："+window.screen.availWidth+
-      "<br>你的螢幕設置是"+ window.screen.colorDepth+"(位彩色)"
-      "<br>你的螢幕設置"+ window.screen.deviceXDPI+"(像素/英寸)"
-    info.innerHTML=s;
-  }
-
-</script>
-
-<hr>
-<pre>
-網頁可見區域寬：document.body.clientWidth
-網頁可見區域高：document.body.clientHeight
-網頁可見區域寬：document.body.offsetWidth(包括邊線和捲軸的寬)
-網頁可見區域高：document.body.offsetHeight(包括邊線的寬)
-網頁正文全文寬：document.body.scrollWidth
-網頁正文全文高：document.body.scrollHeight
-網頁被卷去的高(ff)：document.body.scrollTop
-網頁被卷去的高(ie)：document.documentElement.scrollTop
-網頁被卷去的左：document.body.scrollLeft
-網頁正文部分上：window.screenTop
-網頁正文部分左：window.screenLeft
-螢幕解析度的高：window.screen.height
-螢幕解析度的寬：window.screen.width
-螢幕可用工作區高度：window.screen.availHeight
-螢幕可用工作區寬度：window.screen.availWidth
-你的螢幕設置是 window.screen.colorDepth(位彩色)
-你的螢幕設置 window.screen.deviceXDPI(像素/英寸)
-</pre>
