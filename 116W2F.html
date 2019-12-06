@@ -7,17 +7,22 @@
 <style type="text/css">
   body { font-size: 8vmin;}
   table { font-size: 8vmin;}
+  .n1 {background: #ffaaff;}
+  .n2 {background: #eebbcc;}
+  .n3 {background: #ccbbcc;}
 </style>
 <body>
 <table border=1 id="table2f" >
- <tr><td>迪增</td><td>峰彰</td><td>辰孝</td><td>銘樑</td><td>志鈞</td><td>文福</td><td>奉忠</td><td>俊雄</td><td>仲均</td></tr>
- <tr><td>政聖</td><td>旻隆</td><td>全勝</td><td>勢煌</td><td>進榮</td><td>建有</td><td>國政</td><td>金全</td><td>富信</td></tr>
+ <tr class=n1><td>迪增<td>峰彰<td>辰孝<td>銘樑<td>志鈞<td>文福<td>奉忠<td>俊雄<td>仲均<td class=n2>武宗<td class=n2>志吉<td class=n2>瑞麟
+ <tr class=n1><td>政聖<td>旻隆<td>全勝<td>勢煌<td>進榮<td>建有<td>國政<td>金全<td>富信<td class=n2>景松<td class=n2>崧育<td class=n2>朝源
+ <tr class=n3><td>振瑞<td>岳章<td>坤霖<td>瑞賢<td>宗保<td>景文<td>子達<td>財源<td>皆得<td>宗智<td>冬友<td>東南
+ <tr class=n3><td>志民<td>俊廷<td>裕超<td>鼎貴<td>政哲<td>俊緯<td>振玄<td>楊財<td>忠鴻<td>冠宇<td>宏遠<td>冬青
 </table>
 請點上方的<span id=ques style="color:blue;">abcd</span><br>
 目前得分<span id="usrScore">0</span>
 </body>
 <script>
-  tr=0; td=0; n=0; xing4ming2=[]; max=0; rndStr=""; score=0;
+  tr=0; n=0; xing4ming2=[]; max=0; rndStr=""; score=0;
   tr=document.getElementById("table2f").rows.length;
   for(i=0; i<tr; i++) {
     td=document.getElementById("table2f").rows[i].cells.length;
